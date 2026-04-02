@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Lucas & Miriam</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<canvas id="particulas"></canvas>
+
+<div class="container">
+
+    <h1>Convite de Casamento</h1>
+
+    <p>Com muita alegria convidamos você para celebrar a união de</p>
+
+    <div class="nomes">Lucas & Mirian</div>
+
+    <div class="foto-container">
+    <img src="imagens/foto.jpg.jpg" class="foto-unica">
+</div>
+
+ <div class="bloco-data">
+
+    <div class="data-principal">02 de maio de 2026</div>
+
+    <div class="linha-fina"></div>
+
+    <div class="data-secundaria">sábado, às 17h30</div>
+
+</div>
+
+    <div class="endereco">
+        📍 Rua Pioneiro Bruna Borim Marim, 425<br>
+        Jd. São Paulo – Maringá
+    </div>
+
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdD31lS8vg2WsUES5tmLU3y8lqKe2thIXrGQ__5G5-05h_YxQ/viewform" target="_blank" class="link-botao">
+    Confirmar Presença 💙
+</a>
+
+    <div id="mensagem">
+        💙 Presença confirmada! Estamos te esperando!
+    </div>
+
+    <!-- MAPA -->
+    <iframe src="https://www.google.com/maps?q=Rua+Pioneiro+Bruna+Borim+Marim+425+Maringa&output=embed"></iframe>
+
+    <div class="frase">
+        Sua presença é muito importante para nós ✨
+    </div>
+
+    
+
+    <!-- MÚSICA -->
+    <button onclick="tocarMusica()" class="botao">🎵 Tocar Música</button>
+
+    <audio id="musica" loop>
+        <source src="musica.mp3/33efc334_e47fae09_EDSON___HUDSON_-_FOI_DEUS(MP3_160K)_1.mp3">
+    </audio>
+
+</div>
+
+<section class="final">
+  <p id="texto-final"></p>
+</section>
+
+<script>
+const texto = `E assim, entre encontros e destinos que se cruzaram,
+escrevemos a mais linda história de amor.
+
+Hoje não celebramos apenas um dia…
+celebramos um sentimento que cresceu, floresceu
+e nos trouxe até aqui.
+
+Este é o nosso momento único.
+O começo de uma eternidade juntos.
+
+Obrigado por fazer parte desse capítulo tão especial.
+
+Com todo o nosso amor,
+Lucas & Mirian 💙`;
+
+let i = 0;
+const velocidade = 40;
+
+function escreverTexto() {
+  if (i < texto.length) {
+    document.getElementById("texto-final").innerHTML += texto.charAt(i);
+    i++;
+    setTimeout(escreverTexto, velocidade);
+  }
+}
+window.onload = escreverTexto;
+</script>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>
