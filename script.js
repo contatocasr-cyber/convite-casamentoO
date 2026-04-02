@@ -1,14 +1,3 @@
-function confirmar() {
-    const msg = document.getElementById("mensagem");
-    msg.classList.add("mostrar");
-    msg.innerHTML = "💙 Presença confirmada! Mal podemos esperar!";
-}
-
-function tocarMusica() {
-    document.getElementById("musica").play();
-}
-
-/* PARTÍCULAS */
 const canvas = document.getElementById("particulas");
 const ctx = canvas.getContext("2d");
 
@@ -17,39 +6,49 @@ canvas.height = window.innerHeight;
 
 let particles = [];
 
+// CRIA PARTÍCULAS FINAS
 for (let i = 0; i < 100; i++) {
     particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        r: Math.random() * 2,
-        d: Math.random() * 1
+        r: Math.random() * 2 + 0.5, // bem pequeno (luxo)
+        speed: Math.random() * 1 + 0.2,
+        opacity: Math.random()
     });
 }
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "rgba(212,175,55,0.8)";
-    ctx.beginPath();
 
-    for (let i = 0; i < particles.length; i++) {
-        let p = particles[i];
-        ctx.moveTo(p.x, p.y);
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2, true);
-    }
+    particles.forEach(p => {
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(212,175,55,${p.opacity})`; // dourado suave
+        ctx.shadowColor = "#d4af37";
+        ctx.shadowBlur = 8;
 
-    ctx.fill();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+    });
+
     update();
 }
 
 function update() {
-    for (let i = 0; i < particles.length; i++) {
-        let p = particles[i];
-        p.y += p.d;
+    particles.forEach(p => {
+        p.y += p.speed;
+        p.x += Math.sin(p.y * 0.002); // movimento leve (chique)
 
+        // reset elegante
         if (p.y > canvas.height) {
             p.y = 0;
             p.x = Math.random() * canvas.width;
         }
-    }
+    });
 }
 
+setInterval(draw, 30);
+
+function tocarMusica() {
+    const musica = document.getElementById("musica");
+    musica.play();
+}
