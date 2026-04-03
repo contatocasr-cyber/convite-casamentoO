@@ -1,0 +1,289 @@
+* {
+    font-family: 'Playfair Display', serif;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #0b1f3a, #020817);
+    color: #eaeaea;
+    text-align: center;
+}
+
+/* FUNDO */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* CONTAINER */
+.container {
+    margin: 60px auto;
+    padding: 40px;
+    max-width: 700px;
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 20px;
+    background: rgba(0,0,0,0.4);
+}
+
+/* TÍTULO */
+h1 {
+    font-size: 45px;
+    color: #d4af37;
+}
+
+/* TEXTO */
+.texto {
+    color: #ccc;
+    font-size: 16px;
+}
+
+/* NOMES */
+.nomes {
+    font-size: 42px;
+    color: #d4af37;
+    margin: 20px 0;
+}
+
+/* FOTO */
+.foto-container {
+    margin-top: 30px;
+}
+
+.foto-unica {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid #d4af37;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+.data-luxo {
+  text-align: center;
+  margin: 60px 0;
+  font-family: 'Playfair Display', serif;
+  animation: fadeUp 1.5s ease;
+}
+
+/* LINHAS DOURADAS */
+.data-luxo .linha {
+  width: 220px;
+  height: 1px;
+  margin: 20px auto;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  animation: brilho 3s infinite;
+}
+
+/* DATA */
+.data-luxo .data {
+  font-size: 18px;
+  letter-spacing: 4px;
+  color: #f3f2f2;
+  margin-bottom: 10px;
+}
+
+/* ÍCONE */
+.data-luxo .icone {
+  font-size: 20px;
+  color: #d4af37;
+  margin: 10px 0;
+  animation: pulse 2s infinite;
+}
+
+/* HORA */
+.data-luxo .hora {
+  font-size: 26px;
+  letter-spacing: 5px;
+  color: #fffcfc;
+  font-weight: 600;
+}
+
+/* ANIMAÇÕES */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes brilho {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* BOTÃO */
+.botao {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    text-decoration: none;
+    background: linear-gradient(45deg, #d4af37, #fff3b0);
+    color: #0b1f3a;
+    border-radius: 30px;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* MÚSICA */
+.musica-link {
+    margin-top: 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.musica-link:hover {
+    color: #d4af37;
+}
+
+/* FINAL */
+.final {
+    margin-top: 50px;
+}
+
+.mensagem-final {
+    font-size: 16px;
+    color: #ccc;
+}
+
+.assinatura {
+    margin-top: 15px;
+    font-size: 26px;
+    color: #d4af37;
+}
+
+.carta {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1.5s ease;
+    margin-top: 80px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.carta p {
+    margin-bottom: 20px;
+}
+
+.carta.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ASSINATURA LUXO */
+.assinatura-carta {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #d4af37;
+    letter-spacing: 1px;
+}
+
+/* VERSÍCULO */
+.versiculo {
+    font-size: 16px;
+    font-style: italic;
+    color: #e6d7a3;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.localizacao-mini {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 40px;
+    color: #c5a84b;
+    font-family: 'Georgia', serif;
+}
+
+.localizacao-mini a {
+    color: #d4af37;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.localizacao-mini a:hover {
+    border-bottom: 1px solid #d4af37;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #0a1a2f;
+    font-family: 'Georgia', serif;
+}
+
+.convite {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* TOPO */
+.aliancas {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.topo-convite h1 {
+    font-size: 32px;
+    color: #d4af37;
+    margin: 0;
+}
+
+/* DATA */
+.data {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.hora {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* LOCALIZAÇÃO */
+.localizacao-mini {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.localizacao-mini a {
+    color: #d4af37;
+    text-decoration: none;
+}
+
+/* 📱 AJUSTE EXTRA PRA TELAS MUITO PEQUENAS */
+@media (max-width: 400px) {
+    .topo-convite h1 {
+        font-size: 26px;
+    }
+
+    .data {
+        font-size: 16px;
+    }
+
+    .hora {
+        font-size: 14px;
+    }
+} 
